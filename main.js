@@ -9,20 +9,11 @@ function renderCoffee(coffee) {
     return html;
 }
 
-function newCoffee() {
-    console.log(newName.value);
-    console.log(coffees.length);
-    console.log(newRoast.value);
-    console.log(coffees);
-    coffees.push({
-        id: coffees.length-1,
-        name: newName.value,
-        roast: newRoast.value
-    });
-}
+
 
 function renderCoffees(coffees) {
     var html = '';
+    console.log(coffees.length);
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
@@ -35,15 +26,26 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(keyInput.value)) {
             filteredCoffees.push(coffee);
         }
 
-        if (coffee.name.toLowerCase().includes(keyInput.value)) {
-            filteredCoffees.push(coffee);
-        }
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function newCoffee() {
+    console.log(newName.value);
+    console.log(coffees.length);
+    console.log(newRoast.value);
+    console.log(coffees);
+    coffees.push({
+        id: coffees.length+1,
+        name: newName.value,
+        roast: newRoast.value
+    });
+    console.log(coffees.length);
+    menu.innerHTML = renderCoffees(coffees);
 }
 
 
@@ -69,6 +71,7 @@ var menu = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var keyInput = document.querySelector('#key-input');
+
 var newSubmit = document.querySelector('#newSubmit');
 var newRoast = document.querySelector('#new-roast');
 var newName = document.querySelector('#new-name');
