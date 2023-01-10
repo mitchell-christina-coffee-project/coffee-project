@@ -28,6 +28,8 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(keyInput.value)) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(keyInput.value)){
+            filteredCoffees.push(coffee)
         }
 
     });
@@ -35,16 +37,12 @@ function updateCoffees(e) {
 }
 
 function newCoffee() {
-    console.log(newName.value);
-    console.log(coffees.length);
-    console.log(newRoast.value);
-    console.log(coffees);
     coffees.push({
         id: coffees.length+1,
         name: newName.value,
         roast: newRoast.value
     });
-    console.log(coffees.length);
+
     menu.innerHTML = renderCoffees(coffees);
 }
 
