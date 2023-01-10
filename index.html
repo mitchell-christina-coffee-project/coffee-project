@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+
+
+    <h1 class="d-flex justify-content-center">Coffee!</h1>
+    <hr>
+
 
 <!--    <form>-->
 <!--        <label for="roast-selection"></label>-->
@@ -23,27 +27,54 @@
     <div class="container-fluid">
         <!--list of coffees and roasts-->
         <div class="row">
-            <div class="col-6" id="coffees">
+        <div class="col-6">
+            <div class="menu col d-flex flex-wrap" id="coffees">
 
             </div>
+        </div>
+
         <!--user input-->
-            <div class="col-6 h-100">
-                <div class="container">
-                    <h6>Roast</h6>
-                    <select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap">
+            <div class="col-6">
+            <div class="col">
+                <div class="container-fluid col-12 py-5">
+                    <h6 class = "py-2">Roast</h6>
+                    <select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap py-2" id = "roast-selection">
                         <option selected>All</option>
                         <option value="1">Light</option>
                         <option value="2">Medium</option>
                         <option value="3">Dark</option>
                     </select>
-                    <div class="col-6">
-                        <h6>Coffee Name</h6>
-                        <input type="text" class="form-control" placeholder="">
+                    <br>
+                    <div class="col-fluid">
+                        <h6 class ="py-2">Coffee Name</h6>
+                        <input type="text" class="form-control w-100 my-2" placeholder="">
+                        <button type="button" class="btn btn-primary w-100 my-2" id="submit">Submit</button>
                     </div>
                 </div>
-            </div>
 
+                <div class="container-fluid col-12 pb-5">
+                    <hr>
+                    <h2 class = "d-flex justify-content-center py-2">Add a Coffee</h2>
+                    <h6 class = "py-2">Roast</h6>
+                    <select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap py-2">
+                        <option selected>All</option>
+                        <option value="1">Light</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Dark</option>
+                    </select>
+                    <br>
+                    <div class="col-fluid">
+                        <h6 class = "py-2">Coffee Name</h6>
+                        <input type="text" class="form-control w-100 py-2" placeholder="">
+                        <button type="button" class="btn btn-primary w-100 my-2">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+            </div>
         </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
