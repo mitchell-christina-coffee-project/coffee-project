@@ -10,27 +10,21 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap'); </style>
 </head>
 <body>
+
 <div class="container-fluid">
-<img src="img/il_1588xN.4438440351_2tkb.png" alt="Girl in a jacket" width="125%" height="auto" style="position: absolute; top: -350px; left: -175px">
+    <img src="img/il_1588xN.4438440351_2tkb.png" alt="border"  style="position: absolute; width:100%; height:auto;">
 
-    <h1 class="d-flex justify-content-center" style="font-size: 100px">Coffee!</h1>
+    <div class="col-12">
+    <h1 class="d-flex justify-content-center pt-4 pr-1" style="font-size: 100px">Coffee!</h1>
+    </div>
 
-
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
     <div class="container">
         <!--list of coffees and roasts-->
         <div class="row">
         <div class="col-6">
-            <img src="img/128914994-herbal-rectangular-decorative-frame-watercolor-raster-illustration-geometrical-thin-border-with-copy%20copy.png" style="position: absolute; top: -30px; left: -40px; width: 100%" alt="menu-border">
-            <div class="menu col d-flex flex-wrap px-5" id="coffees">
+            <img src="img/128914994-herbal-rectangular-decorative-frame-watercolor-raster-illustration-geometrical-thin-border-with-copy%20copy.png" style="position: absolute; height:100%; width:auto; left: -5%;" class="img-fluid" alt="menu-border">
+
+            <div class="menu col d-flex flex-wrap px-5 pt-5" id="coffees">
 
             </div>
         </div>
@@ -38,9 +32,9 @@
         <!--user input-->
             <div class="col-6">
             <div class="col">
-                <div class="container-fluid col-12 pb-2">
-                    <h6 class = "py-2">Roast</h6>
-                    <label for="roast-selection"></label><select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap py-2" id = "roast-selection" style="background-color: #C8BA91">
+                <div class="container-fluid col-12 d-flex flex-column justify-content-start">
+                    <h6 class = "pt-0 mb-0">Roast</h6>
+                    <label for="roast-selection"></label><select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap pb-2" id = "roast-selection" style="background-color: #C8BA91">
                         <option selected value="all">All</option>
                         <option value="light">Light</option>
                         <option value="medium">Medium</option>
@@ -48,18 +42,18 @@
                     </select>
                     <br>
                     <div class="col-fluid">
-                        <h6 class ="pt-2">Coffee Name</h6>
-                        <label for="key-input"></label><input type="text" class="form-control w-100 my-2" id="key-input" placeholder="" style="background-color: #C8BA91">
+                        <h6 class ="pt-2 mb-0">Coffee Name</h6>
+                        <label for="key-input"></label><input type="text" class="form-control w-100 mb-2" id="key-input" placeholder="" style="background-color: #C8BA91">
                         <button type="button" class="btn w-100 my-2" id="submit" style="background-color: #6f4e37; color: #e9cba7">Submit</button>
                     </div>
                 </div>
 
-                <div class="container-fluid col-12 pb-5">
-                    <div>
+                <div class="container-fluid col-12 d-flex flex-column justify-content-start pb-5">
+                    <div class="col-12 pt-2">
                         <img src="img/481-4813316_black-and-white-flower-hd-png-download.png" id="gold-line-break" alt="gold-line">
                     </div>
                     
-                    <h2 class = "d-flex justify-content-center pt-3 pb-1">Add a Coffee</h2>
+                    <h2 class = "d-flex justify-content-center pt-5 mb-0">Add a Coffee</h2>
                     <h6 class = "">Roast</h6>
                     <label for="new-roast"></label><select class="form-select form-select-lg m-auto w-100 d-flex flex-nowrap py-2" id="new-roast" style="background-color: #C8BA91">
                         <option value="light">Light</option>
