@@ -1,18 +1,41 @@
-/*
+/*body {*/
+/*    height: 100vh;*/
+/*}*/
+/*!* row color *!*/
+/*div.row {*/
+/*    border: 1px dashed blue;*/
+/*}*/
+/*!* cell color *!*/
+/*div.row > div {*/
+/*    border: 1px solid red;*/
+/*}*/
+/*div.tall-row {*/
+/*    height: 300px;*/
+/*}*/
 body {
-    height: 100vh;
+    background-color: #37251b;
 }
-!* row color *!
-div.row {
-    border: 1px dashed blue;
+
+h1, h2 {
+    color: #e9cba7;
+    font-family: 'Passions Conflict', cursive;
+    font-size: 36px;
 }
-!* cell color *!
-div.row > div {
-    border: 1px solid red;
+h6 {
+    color: #d0992e;
+    font-family: 'Passions Conflict', cursive;
+    font-size: 48px;
 }
-div.tall-row {
-    height: 300px;
-}*/
+
+p {
+    color: #d0992e;
+    font-family: "Apple Chancery", cursive;
+    font-size: 15px;
+}
+#gold-line-break {
+    height: 25%;
+    width: 100%;
+}
 .material-symbols-outlined {
     font-variation-settings:
             'FILL' 0,
@@ -20,3 +43,4 @@ div.tall-row {
             'GRAD' 0,
             'opsz' 48
 }
+
