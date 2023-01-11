@@ -9,6 +9,13 @@ function renderCoffee(coffee) {
     return html;
 }
 
+function noCoffee() {
+    let noCoffeeList ='<div class="coffee col-6">';
+    noCoffeeList += '<h2>No coffees available with those selections.</h2>';
+    noCoffeeList += '</div>';
+
+    return noCoffeeList;
+}
 
 
 function renderCoffees(coffees) {
@@ -30,6 +37,10 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(keyInput.value)){
             filteredCoffees.push(coffee)
+        } else (filteredCoffees.length === 0)
+        {
+            console.log(filteredCoffees.length === 0);
+            noCoffee();
         }
 
     });
@@ -80,3 +91,7 @@ keyInput.addEventListener(`keyup`, updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
 
 newSubmit.addEventListener('click', newCoffee);
+newSubmit.addEventListener('click', function (){
+    roastSelection.value="all";
+    keyInput.value=keyInput.defaultValue;
+});
