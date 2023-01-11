@@ -20,7 +20,6 @@ function noCoffee() {
 
 function renderCoffees(coffees) {
     var html = '';
-    console.log(coffees.length);
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
@@ -43,7 +42,6 @@ function updateCoffees(e) {
 
     if (filteredCoffees.length === 0)
     {
-        console.log(filteredCoffees.length === 0);
         menu.innerHTML = noCoffee();
     } else {
         menu.innerHTML = renderCoffees(filteredCoffees);
