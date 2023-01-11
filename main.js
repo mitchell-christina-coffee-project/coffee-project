@@ -35,16 +35,21 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(keyInput.value)) {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(keyInput.value)){
+        } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(keyInput.value)) {
             filteredCoffees.push(coffee)
-        } else (filteredCoffees.length === 0)
-        {
-            console.log(filteredCoffees.length === 0);
-            noCoffee();
         }
 
     });
-    menu.innerHTML = renderCoffees(filteredCoffees);
+
+    if (filteredCoffees.length === 0)
+    {
+        console.log(filteredCoffees.length === 0);
+        menu.innerHTML = noCoffee();
+    } else {
+        menu.innerHTML = renderCoffees(filteredCoffees);
+
+    }
+
 }
 
 function newCoffee() {
