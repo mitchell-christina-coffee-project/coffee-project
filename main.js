@@ -97,4 +97,5 @@ newSubmit.addEventListener('click', newCoffee);
 newSubmit.addEventListener('click', function (){
     roastSelection.value="all";
     keyInput.value=keyInput.defaultValue;
+    newName.value=newName.defaultValue;
 });
